@@ -85,10 +85,11 @@ def read_expense(expense_file_path, budget):
         print(f"    {key}: R{amount:.2f}")
     #print(amount_by_category)
 #find another way to write the sum of all expenses because 'Expense' object is not iterable
-    total_spent = sum([x.amount for x in expense])
+    ##total_spent = sum([x.amount for x in expense])
+
 #    print(f"Total spent: R{total_spent:.2f}")
     #remaining_budget - buget - total_spent
-    remaining_budget = budget - 4000
+    remaining_budget = budget - amount #4000
     print(f'Budget remaining: R{remaining_budget:.2f}')
 
     #current date
