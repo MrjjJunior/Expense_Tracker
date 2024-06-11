@@ -1,6 +1,9 @@
 from flask import redirect, render_template, request, session
 from functools import wraps
-
+'''
+Script redirect user to login pages
+where they will be asked for details
+'''
 
 def login_required(f):
 	"""
@@ -14,4 +17,3 @@ def login_required(f):
 			return redirect("/login")
 		return f(*args, **kwargs)
 	return decorated_function
-
